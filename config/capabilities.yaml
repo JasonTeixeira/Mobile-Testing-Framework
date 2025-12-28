@@ -1,0 +1,46 @@
+# Appium Capabilities Configuration
+# Adjust these based on your testing needs
+
+# Android Configuration
+android:
+  platformName: Android
+  automationName: UiAutomator2
+  deviceName: Android Emulator
+  platformVersion: "13.0"
+  appiumUrl: http://localhost:4723
+  
+  # App settings (uncomment and set path to your .apk)
+  # app: /path/to/your/app.apk
+  # appPackage: com.your.app
+  # appActivity: com.your.app.MainActivity
+  
+  # Optional settings
+  noReset: false              # Don't reset app state between sessions
+  fullReset: false            # Don't uninstall app
+  newCommandTimeout: 300      # Command timeout (seconds)
+  autoGrantPermissions: true  # Auto-grant Android permissions
+
+# iOS Configuration
+ios:
+  platformName: iOS
+  automationName: XCUITest
+  deviceName: iPhone 14
+  platformVersion: "16.0"
+  appiumUrl: http://localhost:4723
+  
+  # App settings (uncomment and set path)
+  # app: /path/to/your/app.app
+  # bundleId: com.your.app
+  
+  # Optional settings
+  noReset: false
+  fullReset: false
+  newCommandTimeout: 300
+  autoAcceptAlerts: true      # Auto-accept iOS alerts
+  autoDismissAlerts: false
+
+# Common settings for both platforms
+common:
+  implicitWaitTimeout: 10
+  screenshotDir: screenshots/
+  logsDir: logs/
